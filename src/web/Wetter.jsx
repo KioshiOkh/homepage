@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {search, clear, clouds, drizzle, rain, snow, mist, humidity, wind} from '../assets';
 import './wetter.css';
 
-const API_key = "e3801b78e19bd4f12f450c851c54b4f3";
+const API_key = "";
 
 const weatherIcons = {
     '01': clear, // Clear sky
