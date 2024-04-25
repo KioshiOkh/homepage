@@ -1,12 +1,15 @@
-import styles, { layout } from '../style';
+import { Link } from "react-router-dom";
 
 const Page = () => {
-
- return (
-    <div>
-      <p>test</p>
-    </div>
+  return (
+    <>
+      <div id="home">
+        <Link to="/wetter">
+          <button>WetterApp</button>
+        </Link>
+      </div>
+    </>
   );
 };
-  
-export default Page
+
+export default Page;

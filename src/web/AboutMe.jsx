@@ -2,7 +2,7 @@ import styles, {layout} from "../style"
 
 const AboutMe = () => {
   return (
-    <section id="about" className={`${layout.section} py-16 bg-primary`}>
+    <section id="#about" className={`${layout.section} py-16 bg-primary`}>
       <div className={`${styles.boxWidth} container mx-auto px-4 lg:px-8`}>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0">

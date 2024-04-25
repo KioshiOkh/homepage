@@ -16,7 +16,7 @@ const weatherIcons = {
     '50': mist // Mist
   };
   
-const App = () => {
+const Wetter = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [city, setCity] = useState('Berlin'); // Default city is Berlin
 
@@ -64,8 +64,7 @@ const App = () => {
   };
 
   return (
-    <div className='wetter'>
-      <h1 className='title'>Wetter App</h1>
+    <div>
       <div className="card">
         <div className="search">
           <input type="text" placeholder="Stadt eingeben" value={city} onChange={handleInputChange} onKeyDown={handleKeyDown} />
@@ -93,4 +92,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Wetter;

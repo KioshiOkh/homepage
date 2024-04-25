@@ -1,32 +1,22 @@
-import styles from "./style";
-import "./App.css"
-import { Navbar, Page, Footer, AboutMe } from "./web";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { Front, Wetter, Impressum, Privacy_Policy } from "./web";
+import {Layout} from "./Layout"
 
-const App = () => (
-
-    <div className="bg-primary overflow-hidden w-full">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
-        </div>
-        </div>
-
-
-      <div className={`bg-primary ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Page />
-        </div>
-      </div>
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-
-          <AboutMe />
-          <Footer />
-        </div>
-      </div>
-
-    </div>
-  );
+function App(){
+  return(
+    <Router>
+      <Routes>
+        <Route element={<Layout/>}>
+          <Route path="/" element={<Front />}/>
+          <Route path="/wetter" element={<Wetter />}/>
+          <Route path="/impressum" element={<Impressum />}/>
+          <Route path="/privacy-policy" element={<Privacy_Policy/>}/>
+        </Route>
+      </Routes>
+    </Router>
+  )
+}
 
 
 export default App;

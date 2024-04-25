@@ -3,17 +3,22 @@ import { discord, twitch, instagram, github } from "../assets/icons"
 
 export const navLinks = [
     {
-        id: "home",
+        id: "#home",
         title:"Home",
     },
     {
-        id: "about",
+        id: "#about",
         title: "About Me",
     },
     {
-        id: "portfolio",
+        id: "#portfolio",
         title: "Portfolio"
+    },
+    {
+        id:"wetter",
+        title: "Wetter-App"
     }
+     
 
 ]
 
@@ -40,15 +45,15 @@ export const footerLinks = [
         links:[
             {
                 name: "Wetter-App",
-                link: "https://paulokh.de/wetter"
+                link: "wetter"
             },
             {
-                name: "test",
-                link: "test",
+                name: "",
+                link: "",
             },
             {
-                name: "test",
-                link: "test",
+                name: "",
+                link: "",
             }
         ],
     },
@@ -57,11 +62,11 @@ export const footerLinks = [
         links:[
             {
                 name: "Impressum",
-                link: "https://paulokh.de/impressum",
+                link: "impressum",
             },
             {
                 name: "Datenschutzerklärung",
-                link: "https://paulokh.de/privacy"
+                link: "privacy-policy"
             }
         ],
     }
