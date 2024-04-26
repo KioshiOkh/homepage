@@ -1,10 +1,19 @@
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { icon, menu, close } from '../assets/icons';
 import { navLinks } from '../const';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [activeIdLink, setActiveIdLink] = useState(null);
+
+  // Filter out #id
+  const idLinks = navLinks.filter(nav => nav.id.includes('#'));
+
+  const handleNavLinkClick = (nav) => {
+    setActiveIdLink(nav);
+    setToggle(false); // Close the mobile menu 
+  };
 
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
@@ -18,7 +27,14 @@ const Navbar = () => {
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
             } text-white`}
           >
-            <Link to={`/${nav.id}`}>{nav.title}</Link> {/* Step 2 and 3 */}
+            <NavLink
+              to={`/${nav.id}`}
+              activeClassName='active' // Apply 'active' 
+              className={idLinks.includes(nav) && activeIdLink === nav ? 'active-id-link' : ''}
+              onClick={() => handleNavLinkClick(nav)}
+            >
+              {nav.title}
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -43,7 +59,12 @@ const Navbar = () => {
                   index === navLinks.length - 1 ? 'mr-0' : 'mb-4'
                 } text-white`}
               >
-                <Link to={`/${nav.id}`}>{nav.title}</Link> {/* Step 2 and 3 */}
+                <NavLink
+                  to={`/${nav.id}`}
+                  onClick={() => handleNavLinkClick(nav)}
+                >
+                  {nav.title}
+                </NavLink>
               </li>
             ))}
           </ul>
