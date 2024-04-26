@@ -24,7 +24,7 @@ export const navLinks = [
 
 export const footerLinks = [
     {
-        title: "Weitere Links",
+        title: "Community",
         links :[
             {
                 name: "GitHub",

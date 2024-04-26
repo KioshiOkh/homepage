@@ -1,6 +1,6 @@
 import styles from "../style";
 import "../App.css";
-import { Page, Footer, AboutMe } from "../web";
+import { Page, AboutMe } from "../web";
 
 const Front = () => (
   <div>

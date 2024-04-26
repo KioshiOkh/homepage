@@ -17,7 +17,7 @@ const Footer = () => {
                 {link.links.map((items, index) => (
                   <li key={items.name} className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${index !== link.links.length - 1 ? 'mb-2' : 'mb-0'}`}>
                     {/* Replace anchor tags with Link components */}
-                    <Link to={items.link} className="text-white hover:text-secondary">
+                    <Link to={items.link} target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary">
                       {items.name}
                     </Link>
                   </li>

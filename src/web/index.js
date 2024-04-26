@@ -5,7 +5,7 @@ import AboutMe from "./AboutMe.jsx"
 import Wetter from "./Wetter.jsx"
 import Front from "./Front.jsx"
 import Impressum from "./Impressum.jsx"
-import Privacy_Policy from "./Privacy_Policy.jsx"
+import Privacy_policy from "./Privacy_Policy.jsx"
 
 
 export {
@@ -16,5 +16,5 @@ export {
     Wetter,
     Front,
     Impressum,
-    Privacy_Policy
+    Privacy_policy
 }
