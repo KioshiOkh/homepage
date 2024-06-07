@@ -18,6 +18,14 @@
     border-radius: 40%;
     margin-right: 20px;
 }
+.maintitle{
+    -webkit-text-fill-color: #0000;
+    text-fill-color: #0000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(80deg, #662549 30%, #451952 60%, #1d1a39 99%);
+}
+
 .active{
     color: darkorange
 }

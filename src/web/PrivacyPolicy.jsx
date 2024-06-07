@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Privacy_Policy = () => {
+const PrivacyPolicy = () => {
   return (
     <div className="font-normal text-white">
       <h1 className=" font-bold mt-2" >Privacy Policy</h1>
@@ -71,4 +71,4 @@ const Privacy_Policy = () => {
   );
 };
 
-export default Privacy_Policy;
+export default PrivacyPolicy;

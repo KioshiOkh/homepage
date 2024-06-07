@@ -1,4 +1,4 @@
-import { discord, twitch, instagram, github } from "../assets/icons"
+import { discord, twitch, instagram, github } from "../assets"
 
 
 export const navLinks = [

@@ -7,6 +7,14 @@ import humidity from './humidity.png';
 import mist from './mist.png';
 import wind from './wind.png';
 import search from './search.png';
+import discord from './discord.png'
+import github from "./github.png"
+import instagram from "./instagram.png"
+import twitch from "./twitch.png"
+import icon from "./icon.png"
+import google from "./google.svg"
+import close from "./close.svg"
+import menu from "./menu.svg"
 
 export{
     clear,
@@ -17,5 +25,13 @@ export{
     humidity,
     mist,
     wind,
-    search
+    search,
+    discord,
+    github,
+    instagram,
+    twitch,
+    icon,
+    google,
+    close,
+    menu
 }

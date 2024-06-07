@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { icon, menu, close } from '../assets/icons';
+import { icon, menu, close } from '../assets';
 import { navLinks } from '../const';
 
 const Navbar = () => {
