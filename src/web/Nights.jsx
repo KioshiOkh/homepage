@@ -18,7 +18,7 @@ const Nights = () => {
         <h2 className="text-white font-poppins -mt-20 mb-8 font-bold">
           Wie viele Nächte hast du bisher geschlafen?
         </h2>
-        <div className=" shadow-md rounded-xl w-[42vw] lg:w-[20vw] xl:w-[10vw] h-[60vh] flex justify-center items-center flex-col gray-radient">
+        <div className=" shadow-md rounded-xl w-[256px] h-[384px] flex justify-center items-center flex-col gray-radient">
           <label className="text-white underline underline-offset-4">
             Startdatum{": "}
             <input
