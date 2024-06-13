@@ -12,14 +12,13 @@ export const navLinks = [
     },
     {
         id: "#portfolio",
-        title: "Portfolio"
+        title: "Tools"
     },
     {
         id:"wetter",
         title: "Wetter-App"
     }
      
-
 ]
 
 export const footerLinks = [

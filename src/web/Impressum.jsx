@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 const Impressum = () => {
   return (
-    <div className="font-normal text-white ">
+    <div className="font-normal text-white mt-28 ">
       <h1>Impressum</h1>
       <p className="text-[12px]">
         Responsible for the content according to § 5 TMG (Telemediengesetz):

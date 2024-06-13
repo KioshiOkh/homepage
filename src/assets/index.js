@@ -15,6 +15,11 @@ import icon from "./icon.png"
 import google from "./google.svg"
 import close from "./close.svg"
 import menu from "./menu.svg"
+import html from "./html.png"
+import java from "./java.png"
+import css from "./css.png"
+import python from "./python.png"
+import reactpic from "./React.png"
 
 export{
     clear,
@@ -33,5 +38,10 @@ export{
     icon,
     google,
     close,
-    menu
+    menu,
+    html,
+    java,
+    css,
+    python,
+    reactpic
 }

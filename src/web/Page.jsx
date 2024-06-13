@@ -13,6 +13,7 @@ const Page = () => {
             <p class=" font-normal text-[18px] text-white">Hier entsteht einzigartiger much.</p>
           </div>
         </div>
+        <br className="mb-80"></br>
       </section>
     </layout>
   );

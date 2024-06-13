@@ -6,6 +6,7 @@ import Wetter from "./Wetter.jsx"
 import Front from "./Front.jsx"
 import Impressum from "./Impressum.jsx"
 import PrivacyPolicy from "./PrivacyPolicy.jsx"
+import Portfolio from "./Portfolio.jsx"
 
 
 export {
@@ -16,5 +17,6 @@ export {
     Wetter,
     Front,
     Impressum,
-    PrivacyPolicy
+    PrivacyPolicy,
+    Portfolio
 }

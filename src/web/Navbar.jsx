@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink as RouterNavLink } from 'react-router-dom';
+import { HashLink as NavLink } from 'react-router-hash-link';
 import { icon, menu, close } from '../assets';
 import { navLinks } from '../const';
 
@@ -7,12 +8,15 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [activeIdLink, setActiveIdLink] = useState(null);
 
-  // Filter out #id
-  const idLinks = navLinks.filter(nav => nav.id.includes('#'));
-
   const handleNavLinkClick = (nav) => {
-    setActiveIdLink(nav);
-    setToggle(false); // Close the mobile menu 
+    setActiveIdLink(nav.id);
+    setToggle(false); // Close the mobile menu
+  };
+
+  const formatPath = (id) => {
+    // Remove the '/xxx' segment if present and only keep the hash part
+    const cleanPath = id.replace('/wetter', '');
+    return cleanPath.startsWith('#') ? `/${cleanPath}` : `/${cleanPath}`;
   };
 
   return (
@@ -27,14 +31,29 @@ const Navbar = () => {
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
             } text-white`}
           >
-            <NavLink
-              to={`/${nav.id}`}
-              activeClassName='active' // Apply 'active' 
-              className={idLinks.includes(nav) && activeIdLink === nav ? 'active-id-link' : ''}
-              onClick={() => handleNavLinkClick(nav)}
-            >
-              {nav.title}
-            </NavLink>
+            {nav.id.startsWith('#') ? (
+              <NavLink
+                to={formatPath(nav.id)}
+                smooth
+                className={`${
+                  activeIdLink === nav.id ? 'active-id-link' : ''
+                }`}
+                onClick={() => handleNavLinkClick(nav)}
+              >
+                {nav.title}
+              </NavLink>
+            ) : (
+              <RouterNavLink
+                to={formatPath(nav.id)}
+                activeClassName='active'
+                className={`${
+                  activeIdLink === nav.id ? 'active-id-link' : ''
+                }`}
+                onClick={() => handleNavLinkClick(nav)}
+              >
+                {nav.title}
+              </RouterNavLink>
+            )}
           </li>
         ))}
       </ul>
@@ -49,7 +68,8 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? 'flex' : 'hidden'
-          } p-6 bg-red-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] rounded-xl sidebar`}
+          } p-6 bg-red-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          style={{ zIndex: 1000 }}
         >
           <ul className='list-none flex flex-col justify-end items-center flex-1'>
             {navLinks.map((nav, index) => (
@@ -59,12 +79,29 @@ const Navbar = () => {
                   index === navLinks.length - 1 ? 'mr-0' : 'mb-4'
                 } text-white`}
               >
-                <NavLink
-                  to={`/${nav.id}`}
-                  onClick={() => handleNavLinkClick(nav)}
-                >
-                  {nav.title}
-                </NavLink>
+                {nav.id.startsWith('#') ? (
+                  <NavLink
+                    to={formatPath(nav.id)}
+                    smooth
+                    className={`${
+                      activeIdLink === nav.id ? 'active-id-link' : ''
+                    }`}
+                    onClick={() => handleNavLinkClick(nav)}
+                  >
+                    {nav.title}
+                  </NavLink>
+                ) : (
+                  <RouterNavLink
+                    to={formatPath(nav.id)}
+                    activeClassName='active'
+                    className={`${
+                      activeIdLink === nav.id ? 'active-id-link' : ''
+                    }`}
+                    onClick={() => handleNavLinkClick(nav)}
+                  >
+                    {nav.title}
+                  </RouterNavLink>
+                )}
               </li>
             ))}
           </ul>
