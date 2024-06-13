@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../style';
-import {html, css, python, java, reactpic} from '../assets'
+import {html, tailwindcss, python, java, reactpic} from '../assets'
 
 
 const AboutMe = () => {
@@ -23,25 +23,28 @@ const AboutMe = () => {
               </ul>
             </div>
           </div>
-          <div className='flex sm:flex-row flex-col justify-center items-center shadow lg:h-[20vh] sm:mt-10 md:mt-5'>
-            <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:mr-8 app'>
-              <img src={html} alt='html' className='h-[100px]'/>
+          <div className='shadow'>
+          <h3 className='text-white bold justify-center flex text-4xl lg:text-5xl sm:-mb-7 mt-5'>My Stack</h3>
+            <div className='flex sm:flex-row flex-col justify-center items-center lg:h-[20vh] sm:mt-10 md:mt-5'> 
+              <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:mr-8 app'>
+                <img src={html} alt='html' className='h-[100px]'/>
+              </div>
+              <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 app'>
+                <img src={reactpic} alt='react' className='w-[128px]'/>
+              </div>
+              <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:ml-8 app'>
+                <img src={tailwindcss} alt='css' className='h-[100px]'/>
+              </div>
             </div>
-            <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 app'>
-              <img src={reactpic} alt='react' className='w-[128px]'/>
-            </div>
-            <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:ml-8 app'>
-              <img src={css} alt='css' className='h-[100px]'/>
+            <div className='flex sm:flex-row flex-col justify-center items-center'>
+                <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:ml-8 app'>
+                  <img src={java} alt='css' className='h-[100px]'/>
+                </div>
+                <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:ml-8 app'>
+                  <img src={python} alt='css' className='h-[100px]'/>
+                </div>
             </div>
           </div>
-          <div className='flex sm:flex-row flex-col justify-center items-center'>
-              <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:ml-8 app'>
-                <img src={java} alt='css' className='h-[100px]'/>
-              </div>
-              <div className='flex justify-center items-center shadow-xl rounded-xl h-[150px] w-[150px] mb-2 mt-3 sm:ml-8 app'>
-                <img src={python} alt='css' className='h-[100px]'/>
-              </div>
-            </div>
         </div>
       </section>
     </layout>

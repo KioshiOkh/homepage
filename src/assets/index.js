@@ -17,9 +17,10 @@ import close from "./close.svg"
 import menu from "./menu.svg"
 import html from "./html.png"
 import java from "./java.png"
-import css from "./css.png"
+//import css from "./css.png"
 import python from "./python.png"
 import reactpic from "./React.png"
+import tailwindcss from "./tailwindcss.png"
 
 export{
     clear,
@@ -41,7 +42,8 @@ export{
     menu,
     html,
     java,
-    css,
+  //  css,
     python,
-    reactpic
+    reactpic,
+    tailwindcss
 }
