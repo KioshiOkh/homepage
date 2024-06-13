@@ -22,7 +22,8 @@ const Wetter = () => {
 
   useEffect(() => {
     fetchWeather();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   const fetchWeather = () => {
     const API_URL = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${API_key}`;
@@ -65,7 +66,7 @@ const Wetter = () => {
 
   return (
     <div>
-      <div className="card">
+      <div className="card shadow-xl">
         <div className="search">
           <input type="text" placeholder="Stadt eingeben" value={city} onChange={handleInputChange} onKeyDown={handleKeyDown} />
           <button onClick={handleSearch}>

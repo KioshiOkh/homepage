@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { NavLink as RouterNavLink } from 'react-router-dom';
-import { HashLink as NavLink } from 'react-router-hash-link';
-import { icon, menu, close } from '../assets';
-import { navLinks } from '../const';
+import React, { useState } from "react";
+import { NavLink as RouterNavLink } from "react-router-dom";
+import { HashLink as NavLink } from "react-router-hash-link";
+import { icon, menu, close } from "../assets";
+import { navLinks } from "../const";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,29 +15,27 @@ const Navbar = () => {
 
   const formatPath = (id) => {
     // Remove the '/xxx' segment if present and only keep the hash part
-    const cleanPath = id.replace('/wetter', '');
-    return cleanPath.startsWith('#') ? `/${cleanPath}` : `/${cleanPath}`;
+    const cleanPath = id.replace("/wetter", "");
+    return cleanPath.startsWith("#") ? `/${cleanPath}` : `/${cleanPath}`;
   };
 
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar'>
-      <img src={icon} alt='logo' className='logo' />
+    <nav className="w-full flex py-6 justify-between items-center navbar">
+      <img src={icon} alt="logo" className="logo shadow-md" />
 
-      <ul className='list-none sm:flex hidden justify-start items-center flex-1'>
+      <ul className="list-none sm:flex hidden justify-start items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
+              index === navLinks.length - 1 ? "mr-0" : "mr-10"
             } text-white`}
           >
-            {nav.id.startsWith('#') ? (
+            {nav.id.startsWith("#") ? (
               <NavLink
                 to={formatPath(nav.id)}
                 smooth
-                className={`${
-                  activeIdLink === nav.id ? 'active-id-link' : ''
-                }`}
+                className={`${activeIdLink === nav.id ? "active-id-link" : ""}`}
                 onClick={() => handleNavLinkClick(nav)}
               >
                 {nav.title}
@@ -45,10 +43,8 @@ const Navbar = () => {
             ) : (
               <RouterNavLink
                 to={formatPath(nav.id)}
-                activeClassName='active'
-                className={`${
-                  activeIdLink === nav.id ? 'active-id-link' : ''
-                }`}
+                activeClassName="active"
+                className={`${activeIdLink === nav.id ? "active-id-link" : ""}`}
                 onClick={() => handleNavLinkClick(nav)}
               >
                 {nav.title}
@@ -58,33 +54,33 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className='sm:hidden flex flex-1 justify-end items-center'>
+      <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
-          alt='menu'
-          className='w-[28px] h-[28px] object-contain'
+          alt="menu"
+          className="w-[28px] h-[28px] object-contain"
           onClick={() => setToggle((prev) => !prev)}
         />
         <div
           className={`${
-            toggle ? 'flex' : 'hidden'
+            toggle ? "flex" : "hidden"
           } p-6 bg-red-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
           style={{ zIndex: 1000 }}
         >
-          <ul className='list-none flex flex-col justify-end items-center flex-1'>
+          <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
                 className={`font-poppins font-normal cursor-pointer text-[16px] ${
-                  index === navLinks.length - 1 ? 'mr-0' : 'mb-4'
+                  index === navLinks.length - 1 ? "mr-0" : "mb-4"
                 } text-white`}
               >
-                {nav.id.startsWith('#') ? (
+                {nav.id.startsWith("#") ? (
                   <NavLink
                     to={formatPath(nav.id)}
                     smooth
                     className={`${
-                      activeIdLink === nav.id ? 'active-id-link' : ''
+                      activeIdLink === nav.id ? "active-id-link" : ""
                     }`}
                     onClick={() => handleNavLinkClick(nav)}
                   >
@@ -93,9 +89,9 @@ const Navbar = () => {
                 ) : (
                   <RouterNavLink
                     to={formatPath(nav.id)}
-                    activeClassName='active'
+                    activeClassName="active"
                     className={`${
-                      activeIdLink === nav.id ? 'active-id-link' : ''
+                      activeIdLink === nav.id ? "active-id-link" : ""
                     }`}
                     onClick={() => handleNavLinkClick(nav)}
                   >
