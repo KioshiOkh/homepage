@@ -47,8 +47,8 @@ export const footerLinks = [
                 link: "wetter"
             },
             {
-                name: "",
-                link: "",
+                name: "JOJO-Esport",
+                link: "https://jojo-esport.online",
             },
             {
                 name: "",
