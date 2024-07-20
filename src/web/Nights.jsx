@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Nights = () => {
   const [startDate, setStartDate] = useState("");
-  const [nights, setNights] = useState("0");
+  const [nights, setNights] = useState(0);
 
   const NightCalculator = () => {
     const start = new Date(startDate);
@@ -35,11 +35,11 @@ const Nights = () => {
           >
             Berechnen
           </button>
-          {nights !== null && (
+          {nights !== null &&(
             <div className="text-white leading-10">
               <h2>
                 Du hast{" "}
-                <span className="text-blue-700 font-bold">{nights} </span>Nächte
+                <span className="text-white font-bold font-poppins">{nights >= 0 ? nights : 0} </span>Nächte
                 geschlafen!
               </h2>
             </div>
