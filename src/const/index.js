@@ -27,7 +27,7 @@ export const footerLinks = [
         links :[
             {
                 name: "GitHub",
-                link: "https://github.com/KioshiOkh",
+                link: "https://github.com/paulokh",
             },
             {
                 name: "Muchware",
@@ -75,7 +75,7 @@ export const socialMedia = [
     {
         id: "instagram",
         icon: instagram,
-        link: "https://www.instagram.com/paulokh"
+        link: "https://www.instagram.com/paul.okh"
     },
     {
         id: "twitch",
@@ -90,6 +90,6 @@ export const socialMedia = [
     {
         id: "github",
         icon: github,
-        link: "https://github.com/KioshiOkh"
+        link: "https://github.com/paulokh"
     }
 ]
